@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>萌热MOEHOT - 食品专题页</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/topicFood.css"/>
+	<style type="text/css">
+		.topicCntWrap1{background-image: url(../images/bg.jpg);}
+		.topicCntWrap1 .sameWidth.customWidth{height: 750px;}
+		.topicCntWrap1 .sameWidth.customWidth .link1{display: block;height: 100%;margin-bottom: 70px;}
+		.threeFlavor {padding-left: 200px;box-sizing: border-box;}
+		.threeFlavor a{height: 397px;width: 280px;margin-right: 50px;display: inline-block;}
+		.sixType{padding:30px 0 0 280px;}
+		.sixType a{height: 770px;display: inline-block;width: 780px;}
+		.threeFlavor.twoFlavor{margin-bottom: 60px;}
+		.threeFlavor.towFlavor a{width: 420px;}
+		.threeFlavor.old{padding-top: 60px;}
+		.threeFlavor.old a{height:440px;}
+	</style>
+	<script src="../js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<div class="wrap">
+	<script src="../js/layer.js"></script>
+	<div class="head">
+	    <!-- 注册条 -->
+	    <div class="headBar">
+	        <div class="sameWidth forLogoPosition">
+	            <a href="/" class="slogo fleft">
+	                <img src="../images/slogo.png" width="139" height="41">
+	                </a>
+	            <div class="barElse clear">
+	                <div class="welcom fleft" style="width:358px">
+	                    欢迎来到萌热商城
+	                    <a href="javascript:;" class="loginBtn">[请登录]</a>
+	                        <a href="/register/index">[免费注册]</a>
+	                    </div>
+	                <div class="headLinks fleft" style="margin-left:2px;">
+	                    <a href="/personal/personalInfo">用户中心</a>
+	                    <a href="/personal/myMessage">我的消息</a>
+	                    <a href="/memberCollect/myCollect">我的收藏</a>
+	                    <a href="/help/index">帮助中心</a>
+	                    <a style="cursor:pointer" id="setfavorite">收藏本站</a>
+	                </div>
+	                <a href="#" class="forPhone fleft">
+	                    <img src="../images/gotoPhoneDownLoad.png" width="152" height="45"/>
+	                    <p class="erweimaImgs">
+	                        </p>
+	                </a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- //head -->
+	<script>
+	    //头部二维码
+	    $(".forPhone").hover(function () {
+	        $(".erweimaImgs", $(this)).show();
+	    }, function () {
+	        $(".erweimaImgs", $(this)).hide();
+	    });
+	
+	
+	    $("#setfavorite").click(function () {
+	        var title = "萌热热卖官方商城";
+	        var url = "http://" + window.location.host + "";
+	        try {
+	            window.external.addFavorite(url, title);
+	        }
+	        catch (e) {
+	            try {
+	                window.sidebar.addPanel(title, url, "");
+	            }
+	            catch (e) {
+	                layer.alert("抱歉，您所使用的浏览器无法完成此操作，请使用Ctrl+D进行添加");
+	            }
+	        }
+	    });
+	
+//	    $.ajax({
+//	        url: "/config/index",
+//	        type: "post",
+//	        dataType: "json",
+//	        success: function (data) {
+//	            var name = 'download.moehot.code';
+//	            var list = new Array();
+//	            var dataList = data.grouped["1.基本配置"];
+//	            for (var i = 0; i < dataList.length; i++) {
+//	                if (dataList[i].name == name) {
+//	                    var html = "";
+//	                    html += "<img src='//img.moehot.com/" + dataList[i].value + "' width='152' height='152' style='float:right'/>"
+//	                    $(".erweimaImgs").append(html);
+//	                    break;
+//	                }
+//	            }
+//	            
+//	
+//	        }
+//	    });
+	
+	  //登录后，跳转到原有页面
+	    $('.head .headBar .loginBtn').on('click', function() {
+	    	var curHref = window.location.href;		//例：http://localhost:9091/aimon-web-eshop/goods/search?keyWords=IDOLiSH7
+	    	var curCtx = '';
+	    	var uri = curHref.substring(curHref.indexOf(curCtx)+curCtx.length+1);//获取为：goods/search?keyWords=IDOLiSH7
+	    	window.location.href = '/login?redirectUrl=' + uri;
+	    });
+	</script><!-- //head -->
+    <div class="main clearfix">
+    	<!--图片展示区域-->
+        <div class="topicCntWrap1">
+           <div class="imgLogoWrap"><img src="../images/ico_foodLogo1.png"/></div>
+           <!--顶部大图对应链接-->
+           <div class="sameWidth customWidth">
+           		<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank" class="link1"></a>
+           		<!--<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank" class="cntlink cntlink2"></a>
+           		<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank" class="cntlink cntlink3"></a>
+           		<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank" class="cntlink cntlink4"></a>
+           		<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank" class="cntlink cntlink5"></a>
+           		<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank" class="cntlink cntlink6"></a>-->
+           			<!--三款口味对应链接-->
+           		<div class="threeFlavor towFlavor">
+               		<a href="http://www.moehot.com/goods/detail?goodsId=241692&type=" target="_blank"></a>
+               		<a href="http://www.moehot.com/goods/detail?goodsId=241693&type=" target="_blank"></a>
+               	</div>
+               	<div class="threeFlavor old">
+               		<a href="http://www.moehot.com/goods/detail?goodsId=234054&type=" target="_blank"></a>
+               		<a href="http://www.moehot.com/goods/detail?goodsId=234055&type=" target="_blank"></a>
+               		<a href="http://www.moehot.com/goods/detail?goodsId=234056&type=" target="_blank"></a>
+               	</div>
+               	<div class="sixType">
+               		<a href="http://www.moehot.com/goods/search?keyWords=%25E5%258F%25B2%25E5%258A%25AA%25E6%25AF%2594" target="_blank"></a>
+               	</div>
+           </div>
+        </div>
+        <!--艾漫食品介绍-->
+        <div class="topicCntWrap2">
+        	<div class="bgImgWrap"></div>
+        	<div class="sameWidth">
+        		<h2 class="descTitle">艾漫食品介绍</h2>
+        		<div class="descWrap">
+        			<p>艾漫（上海）食品有限公司成立于2015年，总部位于上海，为艾漫（上海）动漫设计有限公司旗下企业。主营内容为食品的设计开发、批发及零售，产品线涵盖蜜饯、膨化食品等多个品类，所有旗下食品均获得官方正版授权，与流行或经典动漫游戏作品相结合，获得了广大青少年及白领一族的青睐。</p>
+        			<p>艾漫食品致力于成为一个引领正版动漫游戏与传统行业相结合的创意型食品品牌。作为一个迎合年轻人文化市场的品牌，公司在严格把控质量及食品安全的前提下，努力为市场提供更加休闲化、年轻化的健康食品。</p>
+        		</div>
+        		<div class="infoWrap">
+        			<h2>品牌资讯</h2>
+        			<div class="infoCntWrap clearfix">
+        				<dl class="clearfix">
+	            					<dt><img src="http://img.moehot.com/upload/1516606050553史努比薯片01.jpg" width="163" height="123"></dt>
+	            					<dd>
+	            						<p class="cntP1"><span class="infoTitle">【新品】史努比零食系列新成员“薯条”上市</span><span class="infoTime">2017-09-13</span></p>
+	            						<p class="cntP2">(*｀∀´*)ノ艾漫AIMON出品史努比系列零食添加新成员啦！</p>
+	            						<a href="http://www.moehot.com/article/newsDetail?id=278" class="readBtn">阅读全文 &gt;&gt;</a>
+	            					</dd>
+	            				</dl>
+        					<dl class="clearfix">
+	            					<dt><img src="http://img.moehot.com/upload/1505294580577IMG_2891.jpg" width="163" height="123"></dt>
+	            					<dd>
+	            						<p class="cntP1"><span class="infoTitle">【史努比零食新品上市】吃出“薯”于你的好心情！</span><span class="infoTime">2017-08-31</span></p>
+	            						<p class="cntP2">大朋友小朋友都爱的史努比，给大家带来全新的味觉享受！(*@ο@*) 哇～o(￣▽￣)d史努比系列食品——焙烤薯片新品上市！“咔嚓咔嚓”美味乐享不停！
+	            						</p>
+	            						<a href="http://www.moehot.com/article/newsDetail?id=247" class="readBtn">阅读全文 &gt;&gt;</a>
+	            					</dd>
+	            				</dl>
+        					<dl class="clearfix">
+	            					<dt><img src="http://wx2.sinaimg.cn/large/7f9ce4b9gy1fd7avm6rx0j20p00dwnao.jpg" width="163" height="123"></dt>
+	            					<dd>
+	            						<p class="cntP1"><span class="infoTitle">【疯传胖友圈】史努比 SNOOPY 鸡味圈 零食 快来种草!</span><span class="infoTime">2017-03-02</span></p>
+	            						<p class="cntP2">在这个日漫国漫风声四起的时代，不知道各位小伙伴们是否还记得童年的卡通经典…
+	            						</p>
+	            						<a href="http://www.moehot.com/article/newsDetail?id=158" class="readBtn">阅读全文 &gt;&gt;</a>
+	            					</dd>
+	            				</dl>
+        					<dl class="clearfix">
+	            					<dt><img src="http://img.moehot.com/upload/1488441628481开学季来袭 800 800_副本01.jpg" width="163" height="123"></dt>
+	            					<dd>
+	            						<p class="cntP1"><span class="infoTitle">艾漫食品微博、微信号开通啦！</span><span class="infoTime">2017-03-02</span></p>
+	            						<p class="cntP2">为了倾听更多的声音，为了倾听更多的声音，艾漫食品 官方微博，艾漫食品 官方微博，开~通~啦~！O(∩_∩)O哈哈~
+	            						</p>
+	            						<a href="http://www.moehot.com/article/newsDetail?id=161" class="readBtn">阅读全文 &gt;&gt;</a>
+	            					</dd>
+	            				</dl>
+        					</div>
+        		</div>
+        	</div>
+        </div>
+    	<!--招商联系-->
+    	<div class="topicCntWrap3">
+    		<div class="sameWidth">
+    			<h2 class="descTitle">招商联系</h2>
+    			<div class="contactWrap">
+    				<div class="contactCntWrap clearfix">
+    					<div class="leftCnt">
+        					<h2>华东区</h2>
+        					<p class="p1">姚经理</p>
+        					<p class="p2">电话：13901839679</p>
+        					<p class="p3">邮箱：yaoenping@aimon.cn</p>
+    					</div>
+    					<div class="rightCnt">
+    						<img src="../images/img_foodCode2.jpg"/>
+    						<p>艾漫食品微信</p>
+
+    					</div>
+    				</div>
+    			</div>
+    			<div class="contactWrap">
+    				<div class="contactCntWrap clearfix">
+    					<div class="leftCnt">
+        					<h2>东北区</h2>
+        					<p class="p1">王经理</p>
+        					<p class="p2">电话：13303603678 </p>
+        					<p class="p3">邮箱：wangwei@aimon.cn</p>
+        					
+        					<p class="p1 extraP">张经理</p>
+        					<p class="p2">电话：18643065331</p>
+        					<p class="p3">邮箱：zhangyong@aimon.cn</p>
+    					</div>
+    					<div class="rightCnt">
+    						<img src="../images/img_foodCode1.jpg"/>
+    						<p>艾漫食品微信</p>
+
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<!--艾漫信息-->
+    		<div class="msgWrap">
+    			<div class="sameWidth">
+        			<div class="msgCntWrap clearfix">
+        				<div class="msgLogoWrap"><img src="../images/ico_foodLogo2.png"></div>
+        				<div class="msgCnt">
+        					<p>艾漫（上海）食品有限公司</p>
+        					<p>地址：中国 上海市 虹口区 广灵四路116号 智慧桥产业园5号楼4楼</p>
+        					<p>电话：+86 21 52681967</p>
+        				</div>
+        			</div>
+        			<p class="msgInfo"><span class="span1">致力于正版动漫</span><span class="span2">商品设计销售 / </span><span class="span3">活动行销 / </span><span class="span4">品牌授权</span><span class="span5">www.aimon.cn</span></p>
+    			</div>
+    		</div>
+    	</div>
+    </div><!-- //main -->
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<style>
+	    .foot .quickLinks {
+	        background-color: #757575;
+	        height: 125px;
+	        overflow: hidden;
+	    }
+	
+	    .foot .quickLinks dl {
+	        width: 223px;
+	        text-align: center;
+	        color: #fff;
+	        font-family: SimSun;
+	    }
+	
+	    .foot .quickLinks dl dt {
+	        padding-top: 25px;
+	        font-weight: bold;
+	    }
+	
+	    .foot .quickLinks dl dt {
+	
+	    }
+	
+	    .foot .quickLinks dl dd {
+	        padding-top: 14px;
+	    }
+	
+	    .foot .quickLinks dl dd a {
+	        color: #fff;
+	        display: block;
+	    }
+	
+	    .foot .copyRight {
+	        height: 44px;
+	        color: #fff;
+	        text-align: center;
+	        background-color: #272727;
+	        line-height: 44px;
+	        font-family: SimSun;
+	    }
+	
+	    /*回到顶部*/
+	    :after, :before {
+	        -webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	    }
+	    .crunchify-top, .crunchify-top:hover {
+	        -webkit-transition: all,.25s;
+	        -o-transition: all,.25s;
+	        transition: all,.25s;
+	    }
+	
+	    .crunchify-top {
+	        display: none;
+	        position: fixed;
+	        /*bottom: 1rem;*/
+	        /*right: 1rem;*/
+	        /*width: 3.2rem;*/
+	        /*height: 3.2rem;*/
+	        /*line-height: 3.2rem;*/
+	        /*font-size: 1.4rem;*/
+	        bottom:15px;
+	        right:15px;
+	        width:39px;
+	        height:39px;
+	        line-height:39px;
+	        font-size:14px;
+	        color: #fff;
+	        background-color: rgba(0,0,0,.3);
+	        text-decoration: none;
+	        border-radius: 3.2rem;
+	        text-align: center;
+	        cursor: pointer;
+	        box-sizing: border-box;
+	    }
+	    .crunchify-top:hover {
+	        background-color: #ff7900;/*原版：#e7f0b4*/
+	        text-decoration: none;
+	    }
+	    .crunchify-top:after {
+	        font-family: 'FontAwesome';
+	        -webkit-font-smoothing: antialiased;
+	        content: "\f106";
+	        font-size: 18px;
+	        color: #fff;
+	        /*line-height: 1;*/
+	    }
+	
+	   /* .crunchify-top:hover:after {
+	        color: #94a847!important;
+	    }*/
+	
+	</style>
+	
+
+	<div class="foot">
+	    <div class="quickLinks">
+	        <div class="sameWidth clearfix">
+	        </div>
+	    </div>
+	    <div class="copyRight">
+	        <div class="sameWidth">
+	            沪ICP备16025054号</div>
+	    </div>
+	    <a href="#" class="crunchify-top" style="display: block;"></a>
+	</div>
+	<!-- //foot -->
+	<script>
+	    $(function () {
+//	        $.ajax({
+//	            url: "/help/foot",
+//	            type: "post",
+//	            dataType: "json",
+//	            success: function (data) {
+//	                var hList = data.hlist;
+//	                var hcList = data.hclist;
+//	                for (var i = 0; i < hcList.length; i++) {
+//	                    var html = "";
+//	                    html += "<dl class='fleft'><dt>" + hcList[i].name + "</dt>";
+//	                    for (var j = 0; j < hList.length; j++) {
+//	
+//	                        if (hcList[i].id == hList[j].channel.id) {
+//	                            html += "<dd><a href='" + hList[j].href + "' target='" + hList[j].artTagName + "'>" + hList[j].title + "</a></dd>";
+//	                        }
+//	                    }
+//	                    $(".quickLinks .sameWidth").append(html);
+//	                }
+//	
+//	            }
+//	        });
+	        /*回到顶部*/
+	        var offset = 220;
+	        var duration = 500;
+	        jQuery(window).scroll(function() {
+	            if (jQuery(this).scrollTop() > offset) {
+	                jQuery('.crunchify-top').fadeIn(duration);
+	            } else {
+	                jQuery('.crunchify-top').fadeOut(duration);
+	            }
+	        });
+	
+	        jQuery('.crunchify-top').click(function(event) {
+	            event.preventDefault();
+	            jQuery('html, body').animate({scrollTop: 0}, duration);
+	            return false;
+	        })
+	    })
+	</script><!-- //foot -->
+</div><!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+/*图片展示区域*/
+.topicCntWrap1{background: url('../images/bg_foodTopic1.png') no-repeat top center;height: 2600px;position: relative;}
+.topicCntWrap1 .imgLogoWrap{position: absolute;top: 5px;right: 0;}
+.topicCntWrap1 .sameWidth.customWidth{position: relative;height: 1855px;z-index: 15;}
+.topicCntWrap1 .cntlink{position: absolute;display: block;width: 400px;height: 400px;}
+.topicCntWrap1 .cntlink.cntlink1{left: 8%; top: 15.7%; transform: rotate(-17deg);}
+.topicCntWrap1 .cntlink.cntlink2{left: 30%; top: 28%; transform: rotate(5deg);}
+.topicCntWrap1 .cntlink.cntlink3{left: 60%; top: 38.5%;}
+.topicCntWrap1 .cntlink.cntlink4{left: 60%; top: 64%; transform: rotate(-20deg);}
+.topicCntWrap1 .cntlink.cntlink5{left: 37%; top: 77.7%; transform: rotate(10deg);}
+.topicCntWrap1 .cntlink.cntlink6{left: 7.5%;top: 66.5%; transform: rotate(-16deg);}
+
+/*艾漫食品介绍*/
+h2.descTitle{margin-left: 190px;position: relative;z-index: 5;font-size: 48px;font-weight: normal;color: #1b1b1b;}
+.topicCntWrap2{position: relative;height: 820px;}
+.topicCntWrap2 .bgImgWrap{position: absolute;top: -356px;right: -245px;z-index: 1; background: url('../images/bg_foodTopic2.png') no-repeat top center;width: 1100px;height: 820px;}
+.topicCntWrap2 .descWrap {font-family: \9ED1\4F53;width: 479px;margin-left: 190px;position: relative;z-index: 5;}
+.topicCntWrap2 .descWrap p{font-size: 16px;color: #434343;line-height: 40px;text-indent: 2em;}
+.topicCntWrap2 .infoWrap{margin-left: 190px;}
+.infoWrap>h2{font-size: 25px;color: #fff;background-color: #707070;font-weight: normal;padding-left: 9px;width: 324px;}
+.infoWrap .infoCntWrap{border: 1px solid #959595;margin-top: 10px;padding: 11px 12px 0;width: 988px;}
+.infoCntWrap dl{width: 486px;height: 125px;float: left;margin: 0 15px 14px 0;}
+.infoCntWrap dl:nth-child(2n){margin-right: 0;}
+.infoCntWrap dl dt{float: left;}
+.infoCntWrap dl dt img{border: 1px solid #e3e3e3;}
+.infoCntWrap dl dd{float: left;width: 303px; margin-left: 17px;font-family: \5B8B\4F53;} 
+.infoCntWrap dl dd p.cntP1 .infoTitle{font-size: 14px;color: #4a4a4a;font-weight: bold;letter-spacing: 0.7px;max-width: 210px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: inline-block;}
+.infoCntWrap dl dd p.cntP1 .infoTime{float: right;color: #757575;margin-right: 16px;}
+.infoCntWrap dl dd p.cntP2{color: #757575;font-size: 12px;letter-spacing: 0.6px;margin-top: 10px; line-height: 22px;display: -webkit-box; -webkit-line-clamp: 2;/*行数*/ -webkit-box-orient: vertical; word-break: break-all;overflow: hidden;height: 44px;}
+.infoCntWrap dl dd a.readBtn{display: block;width: 96px;height: 30px;line-height: 30px;background-color: #ff7900;color: #fff;text-align: center;border-radius: 15px;margin-top: 9px;}
+/*招商联系*/
+.topicCntWrap3{background: url('../images/bg_foodTopic3.png') no-repeat right center;min-height: 785px;}
+.topicCntWrap3 .contactWrap{margin-left: 190px;}
+.contactCntWrap{width: 727px;}
+.contactCntWrap .leftCnt{float: left;border-left: 1px solid #707070;padding-left: 1px;}
+.contactCntWrap .leftCnt>h2{font-size: 25px; color: #fff; background-color: #707070; font-weight: normal; padding-left: 9px; width: 324px;}
+.contactCntWrap .leftCnt>p{font-family: \9ED1\4F53;font-size: 25px;color: #313131;margin-top: 5px;}
+.contactCntWrap .leftCnt>p.extraP{margin-top: 30px;}
+.contactCntWrap .rightCnt{float: right;}
+.contactCntWrap .rightCnt p{font-size: 25px;color: #313131;text-align: center;font-family: \9ED1\4F53;}
+/*信息栏*/
+.topicCntWrap3 .msgWrap{ height: 204px;width: 100%;background: url('../images/bg_foodMsg1px.png') repeat top center;margin-top: 55px;}
+.msgCntWrap{margin-left: 125px;padding-top: 20px;}
+.msgCntWrap .msgLogoWrap{float: left;}
+.msgCntWrap .msgCnt{float: left;margin-left: 47px;margin-top: 31px;}
+.msgCntWrap .msgCnt p{font-size: 22px;color: #434343;}
+.msgWrap .msgInfo{margin-left: 125px;}
+.msgWrap .msgInfo .span1{font-size: 36px; font-weight: bold;color: #898989;letter-spacing: 4px;}
+.msgWrap .msgInfo .span2{margin-left: 22px;}
+.msgWrap .msgInfo .span2,.msgWrap .msgInfo .span3,.msgWrap .msgInfo .span4{font-size: 30px; color: #898989;}
+.msgWrap .msgInfo .span5{font-size: 34px; color: #898989; margin-left: 54px; letter-spacing: 2.5px;}
+@media (min-width: 1338px) {
+	.wrap{overflow-x: hidden;}
+}
+@media (min-width: 1500px) {
+	.topicCntWrap2 .bgImgWrap{right: 0;}
+}
